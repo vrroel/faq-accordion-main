@@ -1,3 +1,116 @@
-body{
-    color: red;
+:root {
+    --white: hsl(0, 100%, 100%);
+    --purple_100: hsl(275, 100%, 97%);
+    --purple_600: hsl(292, 16%, 49%);
+    --purple_950: hsl(292, 42%, 14%);
+}
+
+/*
+.work-sans-<uniquifier> {
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    }
+    */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(../assets/images/background-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* display: grid;
+    place-content: center; */
+    /* height: 100vh; */
+}
+
+.container {
+    max-width: 350px;
+    padding: 1.5rem;
+    background: var(--purple_100);
+    margin:5rem auto 1rem auto;
+    display: grid;
+    gap: 1.5rem;
+    border-radius: 5px;
+}
+
+.title {
+    color: var(--purple_950);
+    display: flex;
+    gap: 1rem;
+}
+
+.title::before {
+    content: "";
+    background-image: url(../assets/images/icon-star.svg);
+    margin: auto 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+details p {
+    color: var(--purple_600);
+    line-height: 1.5;
+    max-width: 310px;
+}
+
+summary {
+    list-style: none;
+    color: var(--purple_950);
+    font-weight: 600;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    /* justify-content: space-between; */
+
+}
+
+summary::after {
+    content: "";
+    background-image: url(../assets/images/icon-plus.svg);
+    margin: auto auto;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    margin-right: 0;
+}
+
+
+details[open] summary::after {
+    background-image: url(../assets/images/icon-minus.svg);
+}
+
+@media (min-width: 450px) {
+    .container {
+        max-width: 560px;
+        margin: 8rem auto 1rem auto;
+    }
+    
+    details p {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 650px) {
+    body {
+        background-image: url(../assets/images/background-pattern-desktop.svg);
+    }
+    
 }
