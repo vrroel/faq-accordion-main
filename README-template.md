@@ -5,7 +5,7 @@ This is a solution to the [FAQ accordion challenge on Frontend Mentor](https://w
 ### Links
 
 - Solution URL: [GitHub Repository](https://github.com/vrroel/social_links_profile)
-- Live Site URL: [GitHub page](https://your-live-site-url.com)
+- Live Site URL: [GitHub page](https://vrroel.github.io/faq-accordion-main/)
 
 ### Built with
 
